@@ -52,8 +52,13 @@ directories must be persisted on host’s disk.
 
 > 
 > https://www.digitalocean.com/community/tutorials/how-to-set-up-master-slave-replication-in-mysql
+> 
 > https://galaxy.ansible.com/opichon/docker-mysql
+>
 > https://github.com/nhat2008/docker-percona-mysql-replicate
 > 
+>  Analysis and coding pending
+> 
+
 
 

@@ -1,8 +1,11 @@
 
 ## Requirement to task implementation:
 ● Solution must contain a valid Vagrantfile to test solution
+
 ● All logic must be implemented via Ansible Playbooks/Roles
+
 ● You can use public Ansible roles, Ansible Galaxy is preferred source
+
 ● Solution must contain basic README
 
 ## Redis Cluster

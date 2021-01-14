@@ -22,6 +22,7 @@ persistent on host.
 > - this folder contains a way to implement the redis replication taking from
 > 
 > https://www.youtube.com/watch?v=GEg7s3i6Jak
+> 
 > https://github.com/marcel-dempers/docker-development-youtube-series/tree/master/storage/redis/clustering
 > 
 > 

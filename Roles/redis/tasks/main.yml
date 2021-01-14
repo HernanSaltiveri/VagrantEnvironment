@@ -1,0 +1,25 @@
+
+
+
+- name: Create Docker Network
+  become: true
+  shell: "docker network create redis"
+  # shell: "echo 'hello'"
+
+
+- name: Create Redis Cluster Node 0 
+  become: true
+  shell: "docker run -d --rm --name redis-0 --net redis -v ${PWD}/redis-0:/etc/redis/ redis:6.0-alpine redis-server /etc/redis/redis.conf
+"
+
+- name: Create Redis Cluster Node 1 
+  become: true
+  shell: "docker run -d --rm --name redis-1 --net redis -v ${PWD}/redis-1:/etc/redis/ redis:6.0-alpine redis-server /etc/redis/redis.conf
+"
+
+- name: Create Redis Cluster Node 2 
+  become: true
+  shell: "docker run -d --rm --name redis-2 --net redis -v ${PWD}/redis-2:/etc/redis/ redis:6.0-alpine redis-server /etc/redis/redis.conf
+"
+ 
+

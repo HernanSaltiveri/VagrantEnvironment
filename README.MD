@@ -36,6 +36,12 @@ Implement Ansible Playbook to deploy RabbitMQ cluster in docker containers.
 After first playbook run, RabbitMQ cluster must be properly initialized. Management interface
 must be present, admin username and password must be configurable via Ansible variables.
 
+> https://www.youtube.com/watch?v=FzqjtU2x6YA
+>
+> https://github.com/marcel-dempers/docker-development-youtube-series/tree/master/messaging/rabbitmq
+
+
+
 ## MySQL replication
 Implement Ansible Playbook which deploys MySQL master and slave in Docker containers.
 First playbook run must result in replication process running with now errors. MySQL data

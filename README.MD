@@ -39,10 +39,21 @@ must be present, admin username and password must be configurable via Ansible va
 > https://www.youtube.com/watch?v=FzqjtU2x6YA
 >
 > https://github.com/marcel-dempers/docker-development-youtube-series/tree/master/messaging/rabbitmq
-
+> 
+> Still work in progress
+> 
+> 
 
 
 ## MySQL replication
 Implement Ansible Playbook which deploys MySQL master and slave in Docker containers.
 First playbook run must result in replication process running with now errors. MySQL data
 directories must be persisted on host’s disk.
+
+> 
+> https://www.digitalocean.com/community/tutorials/how-to-set-up-master-slave-replication-in-mysql
+> https://galaxy.ansible.com/opichon/docker-mysql
+> https://github.com/nhat2008/docker-percona-mysql-replicate
+> 
+
+

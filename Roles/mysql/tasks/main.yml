@@ -1,0 +1,15 @@
+
+
+
+- name: Create Docker Network
+  become: true
+  shell: "docker network create mysql"
+  # shell: "echo 'hello'"
+
+- name: Create Docker Volume
+  become: true
+  shell: "docker volume create mysql"
+
+- name: Create Mysql Node 1 
+  become: true
+  shell: "docker run -d --rm --net mysql --hostname mysql-1 --name mysql-1 -v redis:/data/ mysql/mysql-server:8.0"

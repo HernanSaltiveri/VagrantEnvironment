@@ -4,6 +4,8 @@
   roles: 
       - docker
       - refreshDocker
-      - redis
+      #- redis
+      #- mysql
+      - rabbitmq
 
       

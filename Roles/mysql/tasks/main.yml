@@ -4,12 +4,36 @@
 - name: Create Docker Network
   become: true
   shell: "docker network create mysql"
+  ignore_errors: yes
   # shell: "echo 'hello'"
 
-- name: Create Docker Volume
-  become: true
-  shell: "docker volume create mysql"
+#- name: Create Docker Volume
+#  become: true
+#  shell: "docker volume create mysql"
 
-- name: Create Mysql Node 1 
-  become: true
-  shell: "docker run -d --rm --net mysql --hostname mysql-1 --name mysql-1 -v redis:/data/ mysql/mysql-server:8.0"
+#- name: Create Mysql Node 1 
+#  become: true
+#  shell: "docker run -d --rm --net mysql --hostname mysql-1 --name mysql-1 -v redis:/data/ mysql/mysql-server:8.0"
+
+#- name: Create Mysql Node 1 
+#  become: true
+#  shell: "sudo docker run -d --rm --net mysql --hostname mysql-1 --name mysql-1 mysql/mysql-server:8.0"
+#  ignore_errors: yes
+
+
+- name: Pull default Docker image
+  docker_image:
+    name: "mysql/mysql-server:8.0"
+    source: pull
+  ignore_errors: yes
+
+- name: Create default containers
+  docker_container:
+    name: "mysql-1"
+    image: "mysql/mysql-server:8.0"
+    #command: "{{ default_container_command }}"
+    state: present
+  #with_sequence: count={{ create_containers }}
+  ignore_errors: yes
+
+

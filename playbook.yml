@@ -3,7 +3,7 @@
   become: true
   roles: 
       - docker
-      - refreshDocker
+      - adjustDocker
       #- redis
       #- mysql
       - rabbitmq

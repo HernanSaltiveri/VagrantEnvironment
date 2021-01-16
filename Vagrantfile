@@ -79,6 +79,7 @@ Vagrant.configure("2") do |config|
 
 
   config.vm.provision "ansible" do |ansible|
+    ansible.verbose = "v"
     ansible.playbook = "playbook.yml"
   end
 
@@ -89,8 +90,8 @@ Vagrant.configure("2") do |config|
   #config.vm.provision "shell", path: "bash/redis/hello.sh"
 
   
-  config.vm.provision "shell",
-    inline: "sudo apt-get install docker-ce=18.06.1~ce~3-0~ubuntu -y --force-yes"
+  #config.vm.provision "shell",
+  #  inline: "sudo apt-get install docker-ce=18.06.1~ce~3-0~ubuntu -y --force-yes"
 
   #config.vm.provision "ansible" do |ansible|
   #  ansible.playbook = "playbook1.yml"

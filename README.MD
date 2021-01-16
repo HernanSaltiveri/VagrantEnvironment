@@ -9,11 +9,11 @@
 ● Solution must contain basic README
 
 ## Redis Cluster
-● Implement Ansible playbook to deploy Redis cluster in docker containers.
+1. Implement Ansible playbook to deploy Redis cluster in docker containers.
 
-● After first playbook run, Redis cluster must be properly initialized. 
+2. After first playbook run, Redis cluster must be properly initialized. 
 
-● Redis data should be persistent on host.
+3. Redis data should be persistent on host.
 
 > 
 > Role folder
@@ -34,11 +34,11 @@
 
 
 ## RabbitMQ cluster
-● Implement Ansible Playbook to deploy RabbitMQ cluster in docker containers.
+1. Implement Ansible Playbook to deploy RabbitMQ cluster in docker containers.
 
-● After first playbook run, RabbitMQ cluster must be properly initialized. 
+2. After first playbook run, RabbitMQ cluster must be properly initialized. 
 
-● Management interface must be present, admin username and password must be configurable via Ansible variables.
+3. Management interface must be present, admin username and password must be configurable via Ansible variables.
 
 > https://www.youtube.com/watch?v=FzqjtU2x6YA
 >
@@ -50,11 +50,11 @@
 
 
 ## MySQL replication
-● Implement Ansible Playbook which deploys MySQL master and slave in Docker containers.
+1. Implement Ansible Playbook which deploys MySQL master and slave in Docker containers.
 
-● First playbook run must result in replication process running with now errors. 
+2. First playbook run must result in replication process running with now errors. 
 
-● MySQL data directories must be persisted on host’s disk.
+3. MySQL data directories must be persisted on host’s disk.
 
 > 
 > https://www.digitalocean.com/community/tutorials/how-to-set-up-master-slave-replication-in-mysql

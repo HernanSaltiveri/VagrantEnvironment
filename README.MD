@@ -8,6 +8,13 @@
 
 ● Solution must contain basic README
 
+> 
+> GENERAL EXPLANATION ON SOLUTION
+> 
+> 
+> 
+> 
+
 ## Redis Cluster
 1. Implement Ansible playbook to deploy Redis cluster in docker containers.
 
@@ -22,13 +29,14 @@
 > 
 > Bash folder
 > - this folder contains a way to implement the redis replication taking from
+>
+> REFERENCE
 > 
 > https://www.youtube.com/watch?v=GEg7s3i6Jak
 > 
 > https://github.com/marcel-dempers/docker-development-youtube-series/tree/master/storage/redis/clustering
 > 
 > 
-> Still work in progress
 > 
 > 
 
@@ -39,12 +47,13 @@
 2. After first playbook run, RabbitMQ cluster must be properly initialized. 
 
 3. Management interface must be present, admin username and password must be configurable via Ansible variables.
-
+>
+> REFERENCE
+>
 > https://www.youtube.com/watch?v=FzqjtU2x6YA
 >
 > https://github.com/marcel-dempers/docker-development-youtube-series/tree/master/messaging/rabbitmq
 > 
-> Still work in progress
 > 
 > 
 
@@ -56,6 +65,8 @@
 
 3. MySQL data directories must be persisted on host’s disk.
 
+>
+> REFERENCE
 > 
 > https://www.digitalocean.com/community/tutorials/how-to-set-up-master-slave-replication-in-mysql
 > 
@@ -63,7 +74,8 @@
 >
 > https://github.com/nhat2008/docker-percona-mysql-replicate
 > 
->  Analysis and coding pending
+> https://hub.docker.com/r/mysql/mysql-cluster/
+> 
 > 
 
 

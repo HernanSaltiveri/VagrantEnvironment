@@ -19,21 +19,21 @@
 > 
 > VAGRANT FILE
 > 
-> Vagrant.configure("2") do |config|
+>       Vagrant.configure("2") do |config|
 >
->       config.vm.box = "ubuntu/trusty64"
+>               config.vm.box = "ubuntu/trusty64"
 >
->       config.vm.synced_folder "roles", "/conf"
+>               config.vm.synced_folder "roles", "/conf"
 >
->       config.vm.provision "ansible" do |ansible|
+>               config.vm.provision "ansible" do |ansible|
 >
->           ansible.verbose = "v"
+>                   ansible.verbose = "v"
 >
->           ansible.playbook = "playbook.yml"
+>                   ansible.playbook = "playbook.yml"
+>
+>               end
 >
 >       end
->
-> end
 >
 >
 > PLAYBOOK.yml

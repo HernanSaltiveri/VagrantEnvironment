@@ -11,6 +11,13 @@
 #  become: true
 #  shell: "docker volume create mysql"
 
+- name: Create Mysql Node
+  become: true
+  shell: "docker run -d -p 33060:3306 --name mysql-db -e MYSQL_ROOT_PASSWORD={{ MYSQL_ROOT_PASSWORD }} mysql/mysql-server:8.0"
+  ignore_errors: yes
+
+
+
 #- name: Create Mysql Node 1 
 #  become: true
 #  shell: "docker run -d --rm --net mysql --hostname mysql-1 --name mysql-1 -v redis:/data/ mysql/mysql-server:8.0"
@@ -21,19 +28,19 @@
 #  ignore_errors: yes
 
 
-- name: Pull default Docker image
-  docker_image:
-    name: "mysql/mysql-server:8.0"
-    source: pull
-  ignore_errors: yes
+#- name: Pull default Docker image
+#  docker_image:
+#    name: "mysql/mysql-server:8.0"
+#    source: pull
+#  ignore_errors: yes
 
-- name: Create default containers
-  docker_container:
-    name: "mysql-1"
-    image: "mysql/mysql-server:8.0"
-    #command: "{{ default_container_command }}"
-    state: present
-  #with_sequence: count={{ create_containers }}
-  ignore_errors: yes
+#- name: Create default containers
+#  docker_container:
+#    name: "mysql-1"
+#    image: "mysql/mysql-server:8.0"
+#    #command: "{{ default_container_command }}"
+#    state: present
+#  #with_sequence: count={{ create_containers }}
+#  ignore_errors: yes
 
 

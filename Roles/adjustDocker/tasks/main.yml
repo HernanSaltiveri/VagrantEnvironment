@@ -35,3 +35,8 @@
     name: docker
   ignore_errors: yes
 
+- name: Print Variables Test
+  shell: "echo hello {{ rabbit_user }} "
+  ignore_errors: yes
+
+

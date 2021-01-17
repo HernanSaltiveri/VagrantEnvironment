@@ -3,44 +3,34 @@
 
 - name: Create Docker Network
   become: true
-  shell: "docker network create mysql"
+  shell: "docker network create mysql --subnet=192.168.0.0/16"
   ignore_errors: yes
-  # shell: "echo 'hello'"
 
-#- name: Create Docker Volume
-#  become: true
-#  shell: "docker volume create mysql"
-
-- name: Create Mysql Node
+- name: Create Mysql Management
   become: true
-  shell: "docker run -d -p 33060:3306 --name mysql-db -e MYSQL_ROOT_PASSWORD={{ MYSQL_ROOT_PASSWORD }} mysql/mysql-server:8.0"
+  shell: "docker run -d --net=mysql --name=management1 --ip=192.168.0.2 mysql/mysql-cluster ndb_mgmd"
   ignore_errors: yes
 
+- name: Create Mysql Data Node 1
+  become: true
+  shell: "docker run -d --net=mysql --name=ndb1 --ip=192.168.0.3 mysql/mysql-cluster ndbd"
 
+- name: Create Mysql Data Node 2
+  become: true
+  shell: "docker run -d --net=mysql --name=ndb2 --ip=192.168.0.4 mysql/mysql-cluster ndbd"
 
-#- name: Create Mysql Node 1 
+- name: Create Mysql Service Node 1
+  become: true
+  shell: "docker run -d --net=mysql --name=mysql1 --ip=192.168.0.10 -e MYSQL_ROOT_PASSWORD='{{ MYSQL_ROOT_PASSWORD }}'  mysql/mysql-cluster mysqld"
+
+#- name: Verify
 #  become: true
-#  shell: "docker run -d --rm --net mysql --hostname mysql-1 --name mysql-1 -v redis:/data/ mysql/mysql-server:8.0"
-
-#- name: Create Mysql Node 1 
-#  become: true
-#  shell: "sudo docker run -d --rm --net mysql --hostname mysql-1 --name mysql-1 mysql/mysql-server:8.0"
-#  ignore_errors: yes
+#  shell: "docker run -it --net=mysql mysql/mysql-cluster ndb_mgm"
 
 
-#- name: Pull default Docker image
-#  docker_image:
-#    name: "mysql/mysql-server:8.0"
-#    source: pull
-#  ignore_errors: yes
 
-#- name: Create default containers
-#  docker_container:
-#    name: "mysql-1"
-#    image: "mysql/mysql-server:8.0"
-#    #command: "{{ default_container_command }}"
-#    state: present
-#  #with_sequence: count={{ create_containers }}
-#  ignore_errors: yes
+#shell: "docker run -d -p 33060:3306 --name mysql-db -e MYSQL_ROOT_PASSWORD={{ MYSQL_ROOT_PASSWORD }} mysql/mysql-server:8.0"
+  
+
 
 

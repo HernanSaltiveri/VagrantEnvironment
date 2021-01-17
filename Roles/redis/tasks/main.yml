@@ -8,36 +8,36 @@
 
 - name: Create Docker Volume
   become: true
-  shell: "docker volume create redis"
+  shell: "sudo docker volume create redis"
   ignore_errors: yes
 
 - name: Create Redis Cluster Node 0 
   become: true
-  shell: "docker run -d --rm --name redis-0 --net redis -v /conf/redis/redis-0:/etc/redis/ -v redis:/data/ redis:6.0-alpine redis-server /etc/redis/redis.conf"
+  shell: "sudo docker run -d --rm --name redis-0 --net redis -v /conf/redis/conf/redis-0:/etc/redis/ -v redis:/data/ redis:6.0-alpine redis-server /etc/redis/redis.conf"
   ignore_errors: yes
 
 - name: Create Redis Cluster Node 1 
   become: true
-  shell: "docker run -d --rm --name redis-1 --net redis -v /conf/redis//redis-1:/etc/redis/ -v redis:/data/ redis:6.0-alpine redis-server /etc/redis/redis.conf"
+  shell: "sudo docker run -d --rm --name redis-1 --net redis -v /conf/redis/conf/redis-1:/etc/redis/ -v redis:/data/ redis:6.0-alpine redis-server /etc/redis/redis.conf"
   ignore_errors: yes
 
 - name: Create Redis Cluster Node 2 
   become: true
-  shell: "docker run -d --rm --name redis-2 --net redis -v /conf/redis/redis-2:/etc/redis/ -v redis:/data/ redis:6.0-alpine redis-server /etc/redis/redis.conf"
+  shell: "sudo docker run -d --rm --name redis-2 --net redis -v /conf/redis/conf/redis-2:/etc/redis/ -v redis:/data/ redis:6.0-alpine redis-server /etc/redis/redis.conf"
   ignore_errors: yes
 
 - name: Create Redis Sentinel Node 0 
   become: true
-  shell: "docker run -d --rm --name sentinel-0 --net redis -v /conf/redis/sentinel-0:/etc/redis/ redis:6.0-alpine redis-sentinel /etc/redis/sentinel.conf"
+  shell: "sudo docker run -d --rm --name sentinel-0 --net redis -v /conf/redis/conf/sentinel-0:/etc/redis/ redis:6.0-alpine redis-sentinel /etc/redis/sentinel.conf"
   ignore_errors: yes
 
 - name: Create Redis Sentinel Node 1 
   become: true
-  shell: "docker run -d --rm --name sentinel-1 --net redis -v /conf/redis/sentinel-1:/etc/redis/ redis:6.0-alpine redis-sentinel /etc/redis/sentinel.conf"
+  shell: "sudo docker run -d --rm --name sentinel-1 --net redis -v /conf/redis/conf/sentinel-1:/etc/redis/ redis:6.0-alpine redis-sentinel /etc/redis/sentinel.conf"
   ignore_errors: yes
 
 - name: Create Redis Sentinel Node 2 
   become: true
-  shell: "docker run -d --rm --name sentinel-2 --net redis -v /conf/redis/sentinel-2:/etc/redis/ redis:6.0-alpine redis-sentinel /etc/redis/sentinel.conf"
+  shell: "sudo docker run -d --rm --name sentinel-2 --net redis -v /conf/redis/conf/sentinel-2:/etc/redis/ redis:6.0-alpine redis-sentinel /etc/redis/sentinel.conf"
   ignore_errors: yes
 

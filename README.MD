@@ -17,7 +17,7 @@
 > - Docker : to install docker
 > 
 > 
-> VAGRANT FILE
+> <b>VAGRANT FILE</b>
 > 
 >       Vagrant.configure("2") do |config|
 >
@@ -36,7 +36,7 @@
 >       end
 >
 >
-> PLAYBOOK.yml
+> <b>PLAYBOOK.yml</b>
 >
 >
 > ---

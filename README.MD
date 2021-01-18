@@ -8,14 +8,13 @@ Solution must contain a valid Vagrantfile to test solution. All logic must be im
 
 <b>3. MySQL replication.</b>Implement Ansible Playbook which deploys MySQL master and slave in Docker containers. First playbook run must result in replication process running with now errors. MySQL data directories must be persisted on host’s disk.
 
-> 
-> <b>GENERAL EXPLANATION ON SOLUTION</b>
-> 
-> The solution was implemented using 3 specific roles, one for redis, one for rabbitmq and one for mysql
-> There were also use a docker role to install docker on the vagrant VM taken from ansible galaxy code 
-> Another role was added to adjust docker.
-> 
-> 
+ 
+## GENERAL EXPLANATION ON SOLUTION
+The solution was implemented using 3 specific roles, one for redis, one for rabbitmq and one for mysql
+There were also use a docker role to install docker on the vagrant VM taken from ansible galaxy code 
+Another role was added to adjust docker.
+ 
+
 > <b>VAGRANT FILE</b>
 > 
 >       Vagrant.configure("2") do |config|

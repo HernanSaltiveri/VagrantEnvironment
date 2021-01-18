@@ -2,13 +2,12 @@
 - hosts: all
   become: true
   roles: 
-      #- docker
-      #- adjustDocker
-      #- redis
+      - docker
+      - adjustDocker
+      - redis
       - rabbitmq
       - mysql
       
 
-#
-#
+
       

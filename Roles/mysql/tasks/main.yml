@@ -23,14 +23,7 @@
   become: true
   shell: "docker run -d --net=mysql --name=mysql1 --ip=192.168.0.10 -e MYSQL_ROOT_PASSWORD='{{ MYSQL_ROOT_PASSWORD }}'  mysql/mysql-cluster mysqld"
 
-#- name: Verify
-#  become: true
-#  shell: "docker run -it --net=mysql mysql/mysql-cluster ndb_mgm"
 
-
-
-#shell: "docker run -d -p 33060:3306 --name mysql-db -e MYSQL_ROOT_PASSWORD={{ MYSQL_ROOT_PASSWORD }} mysql/mysql-server:8.0"
-  
 
 
 

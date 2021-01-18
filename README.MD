@@ -43,7 +43,7 @@ Another role was added to adjust docker.
 
 ## Redis Cluster
 
-
+> 
 > <b>REDIS ROLE TASKS</b>
 > 
 >       - name: Create Docker Network

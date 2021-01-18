@@ -43,18 +43,49 @@ Another role was added to adjust docker.
 
 ## Redis Cluster
 
-> 
-> Role folder
-> - Docker : to install docker
-> - Redis : to set up redis cluster
-> 
-> Bash folder
-> - this folder contains a way to implement the redis replication taking from
->
-> 
-> 
-> 
 
+> <b>REDIS ROLE TASKS</b>
+> 
+>       - name: Create Docker Network
+>         become: true
+>         shell: "docker network create redis"
+>         ignore_errors: yes
+>       
+>       - name: Create Docker Volume
+>         become: true
+>         shell: "sudo docker volume create redis"
+>         ignore_errors: yes
+>       
+>       - name: Create Redis Cluster Node 0 
+>         become: true
+>         shell: "sudo docker run -d --rm --name redis-0 --net redis -v /conf/redis/conf/redis-0:/etc/redis/ -v redis:/data/ redis:6.0-alpine redis-server /etc/redis/redis.conf"
+>         ignore_errors: yes
+
+>       - name: Create Redis Cluster Node 1 
+>         become: true
+>         shell: "sudo docker run -d --rm --name redis-1 --net redis -v /conf/redis/conf/redis-1:/etc/redis/ -v redis:/data/ redis:6.0-alpine redis-server /etc/redis/redis.conf"
+>         ignore_errors: yes
+>       
+>       - name: Create Redis Cluster Node 2 
+>         become: true
+>         shell: "sudo docker run -d --rm --name redis-2 --net redis -v /conf/redis/conf/redis-2:/etc/redis/ -v redis:/data/ redis:6.0-alpine redis-server /etc/redis/redis.conf"
+>         ignore_errors: yes
+>       
+>       - name: Create Redis Sentinel Node 0 
+>         become: true
+>         shell: "sudo docker run -d --rm --name sentinel-0 --net redis -v /conf/redis/conf/sentinel-0:/etc/redis/ redis:6.0-alpine redis-sentinel /etc/redis/sentinel.conf"
+>         ignore_errors: yes
+>       
+>       - name: Create Redis Sentinel Node 1 
+>         become: true
+>         shell: "sudo docker run -d --rm --name sentinel-1 --net redis -v /conf/redis/conf/sentinel-1:/etc/redis/ redis:6.0-alpine redis-sentinel /etc/redis/sentinel.conf"
+>         ignore_errors: yes
+>       
+>       - name: Create Redis Sentinel Node 2 
+>         become: true
+>         shell: "sudo docker run -d --rm --name sentinel-2 --net redis -v /conf/redis/conf/sentinel-2:/etc/redis/ redis:6.0-alpine redis-sentinel /etc/redis/sentinel.conf"
+>         ignore_errors: yes
+>       
 
 ## RabbitMQ cluster
 

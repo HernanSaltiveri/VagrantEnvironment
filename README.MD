@@ -3,7 +3,7 @@
 Solution must contain a valid Vagrantfile to test solution. All logic must be implemented via Ansible Playbooks/Roles. You can use public Ansible roles, Ansible Galaxy is preferred source. Solution must contain basic README
 
 > 
-> GENERAL EXPLANATION ON SOLUTION
+> <b>GENERAL EXPLANATION ON SOLUTION</b>
 > 
 > The solution was implemented using 3 specific roles, one for redis, one for rabbitmq and one for mysql
 > There were also use a docker role to install docker on the vagrant VM taken from ansible galaxy code 

@@ -4,6 +4,8 @@ Solution must contain a valid Vagrantfile to test solution. All logic must be im
 
 <b>Redis Cluster.</b> Implement Ansible playbook to deploy Redis cluster in docker containers.After first playbook run, Redis cluster must be properly initialized. Redis data should be persistent on host.
 
+<b>RabbitMQ cluster.</b> Implement Ansible Playbook to deploy RabbitMQ cluster in docker containers. After first playbook run, RabbitMQ cluster must be properly initialized. Management interface must be present, admin username and password must be configurable via Ansible 
+
 > 
 > <b>GENERAL EXPLANATION ON SOLUTION</b>
 > 
@@ -39,11 +41,6 @@ Solution must contain a valid Vagrantfile to test solution. All logic must be im
 
 
 ## Redis Cluster
-1. Implement Ansible playbook to deploy Redis cluster in docker containers.
-
-2. After first playbook run, Redis cluster must be properly initialized. 
-
-3. Redis data should be persistent on host.
 
 > 
 > Role folder

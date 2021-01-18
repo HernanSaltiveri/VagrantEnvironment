@@ -120,7 +120,35 @@ Another role was added to adjust docker.
 >         shell: "sudo docker exec -it rabbit-2 rabbitmqctl cluster_status "
 >         ignore_errors: yes
 >       
+>      
+>       # JOIN SLAVE 2
+>       - name: Join Slave 2 - step 1
+>         become: true
+>         shell: "sudo docker exec -it rabbit-3 rabbitmqctl stop_app "
+>         ignore_errors: yes
 >       
+>       - name: Join Slave 2 - step 2
+>         become: true
+>         shell: "sudo docker exec -it rabbit-3 rabbitmqctl reset "
+>         ignore_errors: yes
+>       
+>       - name: Join Slave 2 - step 3
+>         become: true
+>         shell: "sudo docker exec -it rabbit-3 rabbitmqctl join_cluster rabbit@rabbit-1 "#
+>         ignore_errors: yes
+>       
+>       - name: Join Slave 2 - step 4
+>         become: true
+>         shell: "sudo docker exec -it rabbit-3 rabbitmqctl start_app "
+>         ignore_errors: yes
+>       
+>       - name: Join Slave 2 - step 5
+>         become: true
+>         shell: "sudo docker exec -it rabbit-3 rabbitmqctl cluster_status "
+
+
+
+
 ## MySQL replication
 1. Implement Ansible Playbook which deploys MySQL master and slave in Docker containers.
        

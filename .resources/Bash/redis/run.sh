@@ -16,3 +16,4 @@ docker run -d --rm --name sentinel-2 --net redis -v ${PWD}/sentinel-2:/etc/redis
 
 
 #docker exec -it redis-0 bash
+docker exec -it management1 /bin/bash

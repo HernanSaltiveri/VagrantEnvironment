@@ -117,9 +117,9 @@ Another role was added to adjust docker.
 
  <b>RABBITMQ</b>
 
- https://www.youtube.com/watch?v=FzqjtU2x6YA
+ - https://www.youtube.com/watch?v=FzqjtU2x6YA
 
- https://github.com/marcel-dempers/docker-development-youtube-series/tree/master/messaging/rabbitmq
+ - https://github.com/marcel-dempers/docker-development-youtube-series/tree/master/messaging/rabbitmq
  
  
  
@@ -127,9 +127,9 @@ Another role was added to adjust docker.
 
  <b>REDIS</b>
  
- https://www.youtube.com/watch?v=GEg7s3i6Jak
+ - https://www.youtube.com/watch?v=GEg7s3i6Jak
  
- https://github.com/marcel-dempers/docker-development-youtube-series/tree/master/storage/redis/clustering
+ - https://github.com/marcel-dempers/docker-development-youtube-series/tree/master/storage/redis/clustering
  
  
  

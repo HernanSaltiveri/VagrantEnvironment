@@ -86,55 +86,55 @@ Another role was added to adjust docker.
 >         become: true
 >         shell: "sudo docker run -d --rm --net rabbits -v /conf/rabbitmq/conf/rabbit-2/:/config/ -e RABBITMQ_CONFIG_FILE=/config/rabbitmq -e RABBITMQ_ERLANG_COOKIE=WIWVHCDTCIUAWANLMQAW --hostname rabbit-2 --name rabbit-2 -p 8082:15672 rabbitmq:3.8-management"
 >         ignore_errors: yes
-
+>       
 >       - name: Create Rabbit Cluster Node 3 
 >         become: true
 >         shell: "sudo docker run -d --rm --net rabbits -v /conf/rabbitmq/conf/rabbit-3/:/config/ -e RABBITMQ_CONFIG_FILE=/config/rabbitmq -e RABBITMQ_ERLANG_COOKIE=WIWVHCDTCIUAWANLMQAW --hostname rabbit-3 --name rabbit-3 -p 8083:15672 rabbitmq:3.8-management"
 >         ignore_errors: yes
-
-- name: Start Rabbit Cluster Node 1 
-  become: true
-  shell: "sudo docker exec -it rabbit-1 rabbitmqctl start_app "
-  ignore_errors: yes
-
-- name: Create Rabbit Cluster Node 1 
-  become: true
-  shell: "sudo docker exec -it rabbit-1 rabbitmqctl cluster_status "
-  ignore_errors: yes
-
-
-# JOIN SLAVE 1
-- name: Join Slave 1 - step 1
-  become: true
-  shell: "sudo docker exec -it rabbit-2 rabbitmqctl stop_app "
-  ignore_errors: yes
-
-- name: Join Slave 1 - step 2
-  become: true
-  shell: "sudo docker exec -it rabbit-2 rabbitmqctl reset "
-  ignore_errors: yes
-
-- name: Join Slave 1 - step 3
-  become: true
-  shell: "sudo docker exec -it rabbit-2 rabbitmqctl join_cluster rabbit@rabbit-1 "#
-  ignore_errors: yes
-
-- name: Join Slave 1 - step 4
-  become: true
-  shell: "sudo docker exec -it rabbit-2 rabbitmqctl start_app "
-  ignore_errors: yes
-
-- name: Join Slave 1 - step 5
-  become: true
-  shell: "sudo docker exec -it rabbit-2 rabbitmqctl cluster_status "
-  ignore_errors: yes
-
-
+>       
+>       - name: Start Rabbit Cluster Node 1 
+>         become: true
+>         shell: "sudo docker exec -it rabbit-1 rabbitmqctl start_app "
+>         ignore_errors: yes
+>       
+>       - name: Create Rabbit Cluster Node 1 
+>         become: true
+>         shell: "sudo docker exec -it rabbit-1 rabbitmqctl cluster_status "
+>         ignore_errors: yes
+>       
+>       
+>       # JOIN SLAVE 1
+>       - name: Join Slave 1 - step 1
+>         become: true
+>         shell: "sudo docker exec -it rabbit-2 rabbitmqctl stop_app "
+>         ignore_errors: yes
+>       
+>       - name: Join Slave 1 - step 2
+>         become: true
+>         shell: "sudo docker exec -it rabbit-2 rabbitmqctl reset "
+>         ignore_errors: yes
+>       
+>       - name: Join Slave 1 - step 3
+>         become: true
+>         shell: "sudo docker exec -it rabbit-2 rabbitmqctl join_cluster rabbit@rabbit-1 "#
+>         ignore_errors: yes
+>       
+>       - name: Join Slave 1 - step 4
+>         become: true
+>         shell: "sudo docker exec -it rabbit-2 rabbitmqctl start_app "
+>         ignore_errors: yes
+>       
+>       - name: Join Slave 1 - step 5
+>         become: true
+>         shell: "sudo docker exec -it rabbit-2 rabbitmqctl cluster_status "
+>         ignore_errors: yes
+>       
+>       
 ## MySQL replication
 1. Implement Ansible Playbook which deploys MySQL master and slave in Docker containers.
-
+       
 2. First playbook run must result in replication process running with now errors. 
-
+       
 3. MySQL data directories must be persisted on host’s disk.
 
 

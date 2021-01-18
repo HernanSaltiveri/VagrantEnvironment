@@ -108,36 +108,35 @@
 
 ## References
 
->
-> <b>MYSQL</b>
-> 
-> https://www.digitalocean.com/community/tutorials/how-to-set-up-master-slave-replication-in-mysql
-> 
-> https://galaxy.ansible.com/opichon/docker-mysql
->
-> https://github.com/nhat2008/docker-percona-mysql-replicate
-> 
-> https://hub.docker.com/r/mysql/mysql-cluster/
-> 
-> 
 
->
-> <b>RABBITMQ</b>
->
-> https://www.youtube.com/watch?v=FzqjtU2x6YA
->
-> https://github.com/marcel-dempers/docker-development-youtube-series/tree/master/messaging/rabbitmq
-> 
-> 
-> 
+ <b>MYSQL</b>
+ 
+ https://www.digitalocean.com/community/tutorials/how-to-set-up-master-slave-replication-in-mysql
+ 
+ https://galaxy.ansible.com/opichon/docker-mysql
 
->
-> <b>REDIS</b>
-> 
-> https://www.youtube.com/watch?v=GEg7s3i6Jak
-> 
-> https://github.com/marcel-dempers/docker-development-youtube-series/tree/master/storage/redis/clustering
-> 
-> 
-> 
-> 
+ https://github.com/nhat2008/docker-percona-mysql-replicate
+ 
+ https://hub.docker.com/r/mysql/mysql-cluster/
+ 
+ 
+
+
+ <b>RABBITMQ</b>
+
+ https://www.youtube.com/watch?v=FzqjtU2x6YA
+
+ https://github.com/marcel-dempers/docker-development-youtube-series/tree/master/messaging/rabbitmq
+ 
+ 
+ 
+
+
+ <b>REDIS</b>
+ 
+ https://www.youtube.com/watch?v=GEg7s3i6Jak
+ 
+ https://github.com/marcel-dempers/docker-development-youtube-series/tree/master/storage/redis/clustering
+ 
+ 
+ 

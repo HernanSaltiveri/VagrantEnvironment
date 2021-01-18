@@ -42,7 +42,7 @@ Another role was added to adjust docker.
 
 
 ## Redis Cluster
-
+Creating a Docker Network. Creating Redis Nodes with custom configuration settings files. Creating 3 Sentinel nodes to monitor the cluster.
 > 
 > <b>REDIS ROLE TASKS</b>
 > 

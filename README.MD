@@ -104,13 +104,13 @@ Another role was added to adjust docker.
 
  <b>MYSQL</b>
  
- https://www.digitalocean.com/community/tutorials/how-to-set-up-master-slave-replication-in-mysql
+ - https://www.digitalocean.com/community/tutorials/how-to-set-up-master-slave-replication-in-mysql
  
- https://galaxy.ansible.com/opichon/docker-mysql
+ - https://galaxy.ansible.com/opichon/docker-mysql
 
- https://github.com/nhat2008/docker-percona-mysql-replicate
+ - https://github.com/nhat2008/docker-percona-mysql-replicate
  
- https://hub.docker.com/r/mysql/mysql-cluster/
+ - https://hub.docker.com/r/mysql/mysql-cluster/
  
  
 

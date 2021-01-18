@@ -57,22 +57,9 @@ Another role was added to adjust docker.
 
 
 ## RabbitMQ cluster
-1. Implement Ansible Playbook to deploy RabbitMQ cluster in docker containers.
 
-2. After first playbook run, RabbitMQ cluster must be properly initialized. 
 
-3. Management interface must be present, admin username and password must be configurable via Ansible variables.
->
-> REFERENCE
->
-> https://www.youtube.com/watch?v=FzqjtU2x6YA
->
-> https://github.com/marcel-dempers/docker-development-youtube-series/tree/master/messaging/rabbitmq
-> 
-> 
-> 
 
-> <b>VAGRANT FILE</b>
 > 
 > <b>RABBIT ROLE TASKS</b>
 >

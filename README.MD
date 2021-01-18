@@ -39,15 +39,15 @@
 > <b>PLAYBOOK.yml</b>
 >
 >
-> ---
-> - hosts: all
->   become: true
->   roles: 
->       - docker
->       - adjustDocker
->       - redis
->       - rabbitmq
->       - mysql
+>       ---
+>       - hosts: all
+>         become: true
+>         roles: 
+>             - docker
+>             - adjustDocker
+>             - redis
+>             - rabbitmq
+>             - mysql
 
 
 ## Redis Cluster

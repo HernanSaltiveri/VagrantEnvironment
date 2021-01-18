@@ -60,7 +60,7 @@ Another role was added to adjust docker.
 >         become: true
 >         shell: "sudo docker run -d --rm --name redis-0 --net redis -v /conf/redis/conf/redis-0:/etc/redis/ -v redis:/data/ redis:6.0-alpine redis-server /etc/redis/redis.conf"
 >         ignore_errors: yes
-
+> 
 >       - name: Create Redis Cluster Node 1 
 >         become: true
 >         shell: "sudo docker run -d --rm --name redis-1 --net redis -v /conf/redis/conf/redis-1:/etc/redis/ -v redis:/data/ redis:6.0-alpine redis-server /etc/redis/redis.conf"

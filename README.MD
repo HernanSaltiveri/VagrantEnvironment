@@ -73,6 +73,7 @@ Another role was added to adjust docker.
 > 
 
 > <b>RABBIT ROLE TASKS</b>
+>
 >       - name: Create Docker Network
 >         become: true
 >         shell: "docker network create rabbits" 

@@ -72,6 +72,8 @@ Another role was added to adjust docker.
 > 
 > 
 
+> <b>VAGRANT FILE</b>
+> 
 > <b>RABBIT ROLE TASKS</b>
 >
 >       - name: Create Docker Network

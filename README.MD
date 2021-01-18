@@ -181,11 +181,34 @@ Another role was added to adjust docker.
 
 
 ## MySQL replication
-1. Implement Ansible Playbook which deploys MySQL master and slave in Docker containers.
-       
-2. First playbook run must result in replication process running with now errors. 
-       
-3. MySQL data directories must be persisted on host’s disk.
+
+
+
+>       - name: Create Docker Network
+>         become: true
+>         shell: "docker network create mysql --subnet=192.168.0.0/16"
+>         ignore_errors: yes
+>       
+>       - name: Create Mysql Management
+>         become: true
+>         shell: "docker run -d --net=mysql --name=management1 --ip=192.168.0.2 mysql/mysql-cluster ndb_mgmd"
+>         ignore_errors: yes
+
+>       - name: Create Mysql Data Node 1
+>         become: true
+>         shell: "docker run -d --net=mysql --name=ndb1 --ip=192.168.0.3 mysql/mysql-cluster ndbd"
+
+>       - name: Create Mysql Data Node 2
+>         become: true
+>         shell: "docker run -d --net=mysql --name=ndb2 --ip=192.168.0.4 mysql/mysql-cluster ndbd"
+
+>       - name: Create Mysql Service Node 1
+>         become: true
+>         shell: "docker run -d --net=mysql --name=mysql1 --ip=192.168.0.10 -e MYSQL_ROOT_PASSWORD='{{ MYSQL_ROOT_PASSWORD }}'  mysql/mysql-cluster mysqld"
+
+
+
+
 
 
 

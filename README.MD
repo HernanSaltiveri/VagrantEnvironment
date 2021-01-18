@@ -109,7 +109,7 @@
 ## References
 
 >
-> MYSQL
+> <b>MYSQL</b>
 > 
 > https://www.digitalocean.com/community/tutorials/how-to-set-up-master-slave-replication-in-mysql
 > 
@@ -122,7 +122,7 @@
 > 
 
 >
-> RABBITMQ
+> <b>RABBITMQ</b>
 >
 > https://www.youtube.com/watch?v=FzqjtU2x6YA
 >
@@ -132,7 +132,7 @@
 > 
 
 >
-> REDIS
+> <b>REDIS</b>
 > 
 > https://www.youtube.com/watch?v=GEg7s3i6Jak
 > 

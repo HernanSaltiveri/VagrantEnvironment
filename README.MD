@@ -1,6 +1,8 @@
 
 ## Requirement to task implementation:
-Solution must contain a valid Vagrantfile to test solution. All logic must be implemented via Ansible Playbooks/Roles. You can use public Ansible roles, Ansible Galaxy is preferred source. Solution must contain basic README
+Solution must contain a valid Vagrantfile to test solution. All logic must be implemented via Ansible Playbooks/Roles. You can use public Ansible roles, Ansible Galaxy is preferred source. Solution must contain basic README.
+
+<b>Redis Cluster.</b> Implement Ansible playbook to deploy Redis cluster in docker containers.After first playbook run, Redis cluster must be properly initialized. Redis data should be persistent on host.
 
 > 
 > <b>GENERAL EXPLANATION ON SOLUTION</b>

@@ -88,7 +88,7 @@ Creating a Docker Network. Creating Redis Nodes with custom configuration settin
 >       
 
 ## RabbitMQ cluster
-
+Creating 3 nodes using custom configuration file settings. Setting a custer using rabbit-1 as the master and rabbit-2 and rabbit-3 as slaves
 
 
 > 
@@ -181,7 +181,7 @@ Creating a Docker Network. Creating Redis Nodes with custom configuration settin
 
 
 ## MySQL replication
-
+Setting 1 management mysql node, 2 ndbd data servers ndb1 y ndb2 and 1 mysql node mysql1.
 
 > 
 > <b>MYSQL ROLE TASKS</b>

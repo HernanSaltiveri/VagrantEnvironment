@@ -11,10 +11,9 @@
 > 
 > GENERAL EXPLANATION ON SOLUTION
 > 
-> Start with 
->
-> Role folder
-> - Docker : to install docker
+> The solution was implemented using 3 specific roles, one for redis, one for rabbitmq and one for mysql
+> There were also use a docker role to install docker on the vagrant VM taken from ansible galaxy code 
+> Another role was added to adjust docker.
 > 
 > 
 > <b>VAGRANT FILE</b>

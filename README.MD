@@ -1,5 +1,5 @@
 
-## Requirement to task implementation:
+## Requirement 
 Solution must contain a valid Vagrantfile to test solution. All logic must be implemented via Ansible Playbooks/Roles. You can use public Ansible roles, Ansible Galaxy is preferred source. Solution must contain basic README.
 
 <b>1. Redis Cluster.</b> Implement Ansible playbook to deploy Redis cluster in docker containers.After first playbook run, Redis cluster must be properly initialized. Redis data should be persistent on host.
@@ -9,7 +9,7 @@ Solution must contain a valid Vagrantfile to test solution. All logic must be im
 <b>3. MySQL replication.</b>Implement Ansible Playbook which deploys MySQL master and slave in Docker containers. First playbook run must result in replication process running with now errors. MySQL data directories must be persisted on host’s disk.
 
  
-## GENERAL EXPLANATION ON SOLUTION
+## Solution
 The solution was implemented using 3 specific roles, one for redis, one for rabbitmq and one for mysql
 There were also use a docker role to install docker on the vagrant VM taken from ansible galaxy code 
 Another role was added to adjust docker.
